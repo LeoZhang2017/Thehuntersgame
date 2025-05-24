@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Hunter Games - Official Forum</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>The Hunter Games</h1>
+            <p>Official Forum</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#" id="news-nav">News</a></li>
+                <li><a href="#" id="stage1-nav">Stage 1: The Warehouse</a></li>
+                <li><a href="#" id="stage2-nav">Stage 2: Reds or Blues?</a></li>
+                <li><a href="#" id="stage3-nav">Stage 3: The Billionaire Hunter</a></li>
+                <li><a href="#" id="weapons-nav">Weapons & Items</a></li>
+                <li><a href="#" id="creators-nav">Creators</a></li>
+            </ul>
+        </nav>
+        <div class="auth-buttons">
+            <button id="login-btn">Login</button>
+            <button id="register-btn">Register</button>
+        </div>
+    </header>
+
+    <main>
+        <section id="home-section" class="section active">
+            <div class="hero">
+                <h2>Welcome to The Hunter Games Official Forum</h2>
+                <p>The official platform for all Hunter Games participants</p>
+            </div>
+            
+            <div class="official-announcements">
+                <h3>Official Announcements</h3>
+                <div class="announcements-container">
+                    <div class="announcement">
+                        <h4>Stage 1: The Warehouse</h4>
+                        <p>Official weapon locations and resource distribution have been updated. All participants must review the new warehouse layout before entering.</p>
+                        <span class="announcement-date">Official Notice - Updated</span>
+                    </div>
+                    <div class="announcement">
+                        <h4>Stage 2: Team Assignments</h4>
+                        <p>Red and Blue team assignments will be posted 24 hours before the arena battle. All participants must check their team designation.</p>
+                        <span class="announcement-date">Official Notice - Posted</span>
+                    </div>
+                    <div class="announcement">
+                        <h4>Stage 3: Forest Navigation</h4>
+                        <p>New trap locations have been added to the forest. All participants must review the updated map before entering the final stage.</p>
+                        <span class="announcement-date">Official Notice - Updated</span>
+                    </div>
+                </div>
+                
+                <div class="news-panel">
+                    <h3>Post New Announcement</h3>
+                    <div class="code-verification">
+                        <input type="password" id="admin-code" placeholder="Enter admin code" class="admin-input">
+                        <button id="verify-code" class="verify-btn">Verify</button>
+                    </div>
+                    
+                    <form id="news-form" class="news-form" style="display: none;">
+                        <div class="form-group">
+                            <label for="news-title">Title</label>
+                            <input type="text" id="news-title" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="news-content">Content</label>
+                            <textarea id="news-content" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="news-priority">Priority</label>
+                            <select id="news-priority" required>
+                                <option value="high">High</option>
+                                <option value="medium">Medium</option>
+                                <option value="normal">Normal</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="submit-btn">Post Announcement</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="game-stages">
+                <h3>Official Game Stages</h3>
+                <div class="stages-container">
+                    <div class="stage-card" id="stage1-card">
+                        <h4>Stage 1: The Warehouse</h4>
+                        <p>Official weapon locations: AK-74, QBB95, Rocket launcher, AKM, L86A2, AUG A3. Ammo distribution points marked on map.</p>
+                        <button class="view-more">View Official Map</button>
+                    </div>
+                    <div class="stage-card" id="stage2-card">
+                        <h4>Stage 2: Reds or Blues?</h4>
+                        <p>Official arena layout: Blue team enters from west gate, Red team from east gate. Top 3 teams advance to final stage.</p>
+                        <button class="view-more">View Arena Layout</button>
+                    </div>
+                    <div class="stage-card" id="stage3-card">
+                        <h4>Stage 3: The Billionaire Hunter</h4>
+                        <p>Official forest map with marked trap locations and hunter patrol routes. Vietnam-style traps active.</p>
+                        <button class="view-more">View Forest Map</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="news-section" class="section">
+            <h2>Official News & Announcements</h2>
+            <div class="news-container">
+                <div class="news-filters">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="high">High Priority</button>
+                    <button class="filter-btn" data-filter="medium">Medium Priority</button>
+                    <button class="filter-btn" data-filter="normal">Normal Priority</button>
+                </div>
+                <div class="news-list">
+                    <!-- Will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <section id="stage1-section" class="section">
+            <h2>Stage 1: The Warehouse - Official Information</h2>
+            <div class="stage-info">
+                <p>Official weapon and resource locations in the warehouse. All participants must review this information before entering.</p>
+                <div class="resource-list">
+                    <h3>Official Weapon List:</h3>
+                    <ul>
+                        <li>AK-74 - North Section</li>
+                        <li>QBB95 - East Wing</li>
+                        <li>Rocket launcher - Armory</li>
+                        <li>AKM - South Section</li>
+                        <li>L86A2 - West Wing</li>
+                        <li>AUG A3 - Central Area</li>
+                    </ul>
+                    <p>Official ammo distribution points are marked on the warehouse map.</p>
+                </div>
+            </div>
+            <div class="official-notices">
+                <h3>Official Notices</h3>
+                <div class="notices-list">
+                    <!-- Will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <section id="stage2-section" class="section">
+            <h2>Stage 2: Reds or Blues? - Official Information</h2>
+            <div class="stage-info">
+                <p>Official arena layout and team assignments. Blue team enters from west gate, red team from east gate. Only top 3 teams advance.</p>
+                <div class="team-strategies">
+                    <div class="team-strategy red">
+                        <h3>Red Team Official Information</h3>
+                        <p>East gate entry point and designated team areas.</p>
+                    </div>
+                    <div class="team-strategy blue">
+                        <h3>Blue Team Official Information</h3>
+                        <p>West gate entry point and designated team areas.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="official-notices">
+                <h3>Official Notices</h3>
+                <div class="notices-list">
+                    <!-- Will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <section id="stage3-section" class="section">
+            <h2>Stage 3: The Billionaire Hunter - Official Information</h2>
+            <div class="stage-info">
+                <p>Official forest map with marked trap locations and hunter patrol routes. All participants must review this information before entering.</p>
+                <div class="trap-tips">
+                    <h3>Official Trap Locations</h3>
+                    <p>Vietnam-style traps are marked on the official forest map. All participants must review trap locations before entering.</p>
+                </div>
+            </div>
+            <div class="official-notices">
+                <h3>Official Notices</h3>
+                <div class="notices-list">
+                    <!-- Will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <section id="weapons-section" class="section">
+            <h2>Official Weapons & Items Guide</h2>
+            <div class="weapons-container">
+                <h3>Official Weapons List</h3>
+                <div class="weapons-grid">
+                    <!-- Will be populated by JavaScript -->
+                </div>
+            </div>
+            <div class="checkpoints-info">
+                <h3>Official Checkpoints</h3>
+                <div class="checkpoint">
+                    <h4>Checkpoint 1 (Round 1 to 2)</h4>
+                    <p>Official inventory: Ammo, food, water, and medical items.</p>
+                </div>
+                <div class="checkpoint">
+                    <h4>Checkpoint 2 (Round 2 to 3)</h4>
+                    <p>Official inventory: Grenades, molotovs, incendiary and explosive ammo.</p>
+                </div>
+                <p class="note">Official Notice: Coins are scattered around the map, not in checkpoints. Weapons can be acquired from defeated enemies.</p>
+            </div>
+        </section>
+
+        <section id="creators-section" class="section">
+            <h2>The Creators</h2>
+            <div class="creators-info">
+                <div class="overview-section">
+                    <h3>Our Goals & Vision</h3>
+                    <div class="overview-content">
+                        <p>Our primary goal is to create a game that everyone can enjoy, regardless of their gaming background or skill level. We're using AI technology to make The Hunter Games more accessible and engaging for all players.</p>
+                        
+                        <p>Key Goals:</p>
+                        <ul class="goals-list">
+                            <li>Create an inclusive gaming experience that adapts to each player's skill level</li>
+                            <li>Use AI to dynamically adjust game difficulty and provide personalized challenges</li>
+                            <li>Build a strong community where players can share strategies and experiences</li>
+                            <li>Continuously improve the game based on player feedback</li>
+                            <li>Make gaming more accessible and enjoyable for everyone</li>
+                        </ul>
+
+                        <p>Development Information:</p>
+                        <p>We believe that games should be more than just entertainment - they should be experiences that bring people together and challenge them to think creatively. By leveraging AI technology, we've created a dynamic gaming environment that adapts to players' skills and preferences, ensuring an engaging experience for everyone.</p>
+                        
+                        <p>Our three-stage structure combines resource gathering, team-based combat, and survival skills in a way that's both challenging and rewarding. Each stage has been carefully designed to encourage different playstyles and strategies, allowing players to find their own path to victory.</p>
+                        
+                        <p>This forum serves as the official platform for The Hunter Games, where players can access important information, stay updated on game changes, and connect with other participants. We're committed to continuously improving the game based on player feedback and ensuring that everyone has a great experience.</p>
+                        
+                        <p>Join us in this exciting journey as we push the boundaries of what's possible in gaming, creating an experience that's not just about winning, but about the thrill of the hunt and the joy of playing together.</p>
+                    </div>
+                </div>
+                
+                <div class="creators-grid">
+                    <div class="creator-card">
+                        <div class="creator-image">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                        <h3>Sterling</h3>
+                        <p class="creator-role">Lead Game Designer</p>
+                        <p class="creator-bio">Mastermind behind the game's unique three-stage structure and combat mechanics.</p>
+                    </div>
+                    
+                    <div class="creator-card">
+                        <div class="creator-image">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                        <h3>Matthew</h3>
+                        <p class="creator-role">Weapons Specialist</p>
+                        <p class="creator-bio">Designed and balanced all weapons and items throughout the game.</p>
+                    </div>
+                    
+                    <div class="creator-card">
+                        <div class="creator-image">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                        <h3>Leo</h3>
+                        <p class="creator-role">Level Designer</p>
+                        <p class="creator-bio">Created the warehouse, arena, and forest environments with a focus on strategic gameplay.</p>
+                    </div>
+                    
+                    <div class="creator-card">
+                        <div class="creator-image">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                        <h3>Henry</h3>
+                        <p class="creator-role">Narrative Director</p>
+                        <p class="creator-bio">Developed the story of the billionaire hunter and the world of The Hunter Games.</p>
+                    </div>
+                </div>
+                
+                <div class="creator-message">
+                    <h3>A Message from the Creators</h3>
+                    <blockquote>
+                        "We created The Hunter Games to challenge players with a unique combination of resource gathering, team-based combat, and survival skills. Our vision was to create a game where strategy and skill are equally important. We're thrilled to see our community growing and can't wait to see how players master each stage of the game!"
+                    </blockquote>
+                    <p class="quote-attribution">- Sterling, Matthew, Leo & Henry</p>
+                </div>
+                
+                <div class="development-history">
+                    <h3>Development History</h3>
+                    <ul class="timeline">
+                        <li>
+                            <div class="timeline-date">Concept Phase</div>
+                            <div class="timeline-content">
+                                <h4>Initial Concept Development</h4>
+                                <p>The team came together to create a fresh take on the battle royale genre with a multi-stage approach.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="timeline-date">Design Phase</div>
+                            <div class="timeline-content">
+                                <h4>Game Mechanics & Level Design</h4>
+                                <p>Each stage was carefully designed to offer unique challenges and gameplay experiences.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="timeline-date">Testing Phase</div>
+                            <div class="timeline-content">
+                                <h4>Balancing & Refinement</h4>
+                                <p>Extensive testing to ensure balanced gameplay across all three stages.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="timeline-date">Launch</div>
+                            <div class="timeline-content">
+                                <h4>The Hunter Games Goes Live</h4>
+                                <p>The game launched to an enthusiastic reception from players worldwide.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Login Modal -->
+    <div id="login-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Login</h2>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="login-username">Username</label>
+                    <input type="text" id="login-username" required>
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Password</label>
+                    <input type="password" id="login-password" required>
+                </div>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Register Modal -->
+    <div id="register-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Register</h2>
+            <form id="register-form">
+                <div class="form-group">
+                    <label for="register-username">Username</label>
+                    <input type="text" id="register-username" required>
+                </div>
+                <div class="form-group">
+                    <label for="register-email">Email</label>
+                    <input type="email" id="register-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="register-password">Password</label>
+                    <input type="password" id="register-password" required>
+                </div>
+                <div class="form-group">
+                    <label for="register-confirm">Confirm Password</label>
+                    <input type="password" id="register-confirm" required>
+                </div>
+                <button type="submit">Register</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>The Hunter Games</h3>
+                <p>The official forum for discussing all aspects of The Hunter Games.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Rules</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-discord"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 The Hunter Games. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
